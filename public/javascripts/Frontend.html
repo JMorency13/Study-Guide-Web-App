@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Guide Maker</title>
+</head>
+<body>
+  <h1>Upload Text, PDF, or Video to Generate Study Guide</h1>
+
+  <h2>Upload Text</h2>
+  <form action="/upload/upload-text" method="POST">
+    <textarea name="textContent" placeholder="Paste your text here" rows="5" cols="50"></textarea><br>
+    <button type="submit">Generate Study Guide</button>
+  </form>
+
+  <h2>Upload PDF</h2>
+  <form action="/upload/upload-pdf" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="application/pdf"><br>
+    <button type="submit">Upload PDF</button>
+  </form>
+
+  <h2>Upload Video</h2>
+  <form action="/upload/upload-video" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file"><br>
+    <input type="submit" value="Generate Study Guide">
+  </form>
+</body>
+</html>
