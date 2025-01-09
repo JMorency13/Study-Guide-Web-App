@@ -12,7 +12,7 @@ var ffmpeg = require('fluent-ffmpeg');
 const { OpenAI } = require('openai');
 
 // Import the generateStudyGuide function from utils.js
-const { generateStudyGuide } = require('./utils');
+const { generateStudyGuide } = require('./utils/utils');
 var app = express();
 
 // Routers
