@@ -6,7 +6,7 @@ const path = require('path');
 const { OpenAI } = require('openai');
 
 // Import the generateStudyGuide function from utils.js
-const { generateStudyGuide } = require('./utils');
+const { generateStudyGuide } = require('../utils/utils');
 
 const router = express.Router();
 
