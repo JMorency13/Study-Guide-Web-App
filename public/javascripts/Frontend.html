@@ -25,5 +25,19 @@
     <input type="file" name="file"><br>
     <input type="submit" value="Generate Study Guide">
   </form>
+
+  <h2>Generated Study Guide</h2>
+  <div id="study-guide-output">
+    <!-- The generated study guide HTML will be inserted here -->
+    <p>Loading study guide...</p>
+  </div>
+
+  <script>
+    // If the server returns the study guide as HTML, you can insert it into the 'study-guide-output' div
+    const studyGuideContent = "<%= studyGuide %>"; // Inject the generated HTML into the page
+
+    document.getElementById('study-guide-output').innerHTML = studyGuideContent;
+  </script>
+  
 </body>
 </html>
