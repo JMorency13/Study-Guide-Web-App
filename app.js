@@ -62,8 +62,8 @@ app.post('/upload-text', async (req, res) => {
     if (!textContent) {
       return res.status(400).json({ error: 'No text content provided' });
     }
-    const studyGuide = await generateStudyGuide(textContent);
-    res.json({ studyGuide });
+    const studyGuide = await generateStudyGuide(textContent); // This returns HTML now
+    res.send(studyGuide); // Send HTML directly to the client (instead of JSON)
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
